@@ -29,7 +29,7 @@ Preview URL: http://127.0.0.1:4313/buildflow-digital-transformation/. Whiteliste
 
 The [Pages workflow](../.github/workflows/pages.yml) validates document links, API regression and static browser workflows before deploying. It uses GitHub's [custom Pages deployment workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), an isolated build artifact and the `github-pages` environment. Future pushes to main update the demo after checks succeed.
 
-## Verified locally — 8 October 2026
+## Verification — 8 October 2026
 
 - Three Chromium browser scenarios: full process; persistence/visitor isolation/reset; mobile and synthetic evidence upload.
 - No API requests, failed static assets or relevant browser errors during the tested scenarios.
@@ -39,3 +39,5 @@ The [Pages workflow](../.github/workflows/pages.yml) validates document links, A
 Production Microsoft/ERP integrations, business UAT, live AI and security gates remain separate target work. [Quality audit](quality-audit.md).
 
 [Repository overview](/README.md)
+
+The [Pages deployment](https://github.com/phlppgdfry/buildflow-digital-transformation/actions/runs/37694100332) succeeded and the public URL returned HTTP 200. All three scenarios also passed against the hosted site in Chromium, without authentication. The synthetic image check waits for download completion to avoid a network-latency race. [Hosted desktop/mobile screenshots](../14-demo/screenshots/README.md).

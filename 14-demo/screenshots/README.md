@@ -22,3 +22,11 @@ Screenshots are generated from the seeded local prototype by `npm run test:ui`: 
 ## Mobile
 
 ![Mobile operations after workflow demonstration](dashboard-mobile.png)
+
+## Public GitHub Pages demo
+
+Captured on the published site with a fresh browser context. Each visitor has independent local demo data and can reset the simulation.
+
+![Public desktop demo](public-demo-desktop.png)
+
+![Public mobile demo](public-demo-mobile.png)

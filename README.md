@@ -52,7 +52,7 @@ The repository contains **design artefacts**, **executable prototype evidence**,
 
 ## Prototype preview
 
-![Local operations dashboard with synthetic seed data](14-demo/screenshots/dashboard-desktop.png)
+![Public browser demo with synthetic seed data](14-demo/screenshots/public-demo-desktop.png)
 
 ## Try the public demo
 
