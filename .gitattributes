@@ -1,0 +1,7 @@
+*.md text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.bpmn text eol=lf
+# Preserve official third-party schema bytes and original whitespace.
+docs/schemas/bpmn/*.xsd -text -whitespace

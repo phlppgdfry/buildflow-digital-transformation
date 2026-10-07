@@ -61,3 +61,5 @@ XML ordering was fixed to satisfy OMG XSD, gateway defaults were verified, and o
 ### Open target gates
 
 No real ERP vendor/tenant, Entra/project-scoped auth, document malware scanning, business-calendar execution, load test, cloud recovery drill, live AI evaluation or business UAT/sign-off is claimed. Power Automate files are blueprints, not exported deployed flows. QR payload is visible; camera scan/printable QR is target work. Prototype maintenance/loss/retirement/offline asset transactions are described in the capability map. Public-repository readiness is achieved independently of enterprise production readiness.
+
+Diagram previews were rendered through a local HTML wrapper and visually inspected. Direct native SVG screenshot capture timed out in Chromium; this affected only the auxiliary preview renderer, not app browser tests. Alternative end-node overlap and straight connectors crossing intermediate tasks were corrected. Official vendored XSD retains original whitespace; `.gitattributes` excludes only those third-party files from whitespace lint.
