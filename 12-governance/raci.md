@@ -7,7 +7,7 @@ R = performs; A = accountable decision owner; C = consulted; I = informed. Exact
 | Discovery/workshop | R | A | C | C | C | C | C | C |
 | Requirements/process approval | R | A | C | C | C | C | C | C |
 | Technical architecture | C | C | A | R | C | C | C | I |
-| Custody policy | C | C | C | I | A | R | I | C |
+| Custody policy | C | C | C | I | R | A | I | C |
 | Financial controls | C | C | C | R | I | C | A | I |
 | Implementation/build | C | I | A | R | C | I | C | C |
 | Data cleansing/physical validation | C | I | C | R | A | C | C | R |
