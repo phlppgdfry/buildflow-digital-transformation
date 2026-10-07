@@ -1,6 +1,8 @@
 # Executive demonstration
 
-Start with `npm ci` and `npm start`, open http://127.0.0.1:4310. Use a clean seed for predictable values. See [reset procedure](08-prototype/README.md).
+For a recruiter or remote interview, open the [live browser demo](https://phlppgdfry.github.io/buildflow-digital-transformation/). It needs no installation. Use **Reset demo** before your presentation. The public version simulates the process using private browser data.
+
+For the local API version, start with `npm ci` and `npm start`, open http://127.0.0.1:4310. Use a clean seed for predictable values. See [reset procedure](08-prototype/README.md).
 
 Open these tabs before the interview: [workshop notes](01-discovery/workshop-notes-example.md), [traceability](02-requirements/requirements-traceability-matrix.md), [BPMN](03-processes/bpmn/README.md), [architecture](ARCHITECTURE.md), app, [business case](13-kpis/business-case.md).
 

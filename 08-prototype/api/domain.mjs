@@ -1,4 +1,5 @@
-import { randomUUID } from 'node:crypto';
+// Shared pure simulation rules for Node.js and the public browser demo.
+const randomUUID = () => globalThis.crypto.randomUUID();
 export const roles = { Employee:'EMP-001', Warehouse:'WH-001', Manager:'MGR-001', Finance:'FIN-001', Administrator:'ADM-001' };
 export const sites = [{id:'SITE-004',name:'Oostende · Site 004'},{id:'SITE-005',name:'Brugge · Site 005'}];
 export const employees = ['EMP-001','EMP-002','EMP-003'];

@@ -1,5 +1,9 @@
 # Executable local prototype
 
+[Open public GitHub Pages demo](https://phlppgdfry.github.io/buildflow-digital-transformation/) · [Hosting notes](../docs/pages-demo.md)
+
+The public version reuses the process rules and stores a separate simulated state in each visitor’s browser. The local version below runs the REST API and SQLite.
+
 This app supports the analysis; it is not a deployed Power Platform/ERP system. Requires Node.js 24. All company data, identities and evidence are fictional. Start from repository root:
 
 ```sh
@@ -58,3 +62,11 @@ npm run test:ui
 Browser plugin skill is absent in this session, so Playwright is used for rendered QA. Test database is isolated at a temporary path; tests generate the requested portfolio screenshots. Browser tests inspect desktop and mobile, console errors, primary interactions, safe generated-text rendering and overflow. [Quality audit](../docs/quality-audit.md).
 
 [Repository overview](../README.md)
+
+## Preview the public build locally
+
+```sh
+npm run preview:pages
+```
+
+Open http://127.0.0.1:4313/buildflow-digital-transformation/. This deliberately tests the repository subpath used by GitHub Pages. `npm run test:pages` checks the static build independently of the API.

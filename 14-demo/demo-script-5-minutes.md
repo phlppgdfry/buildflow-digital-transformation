@@ -10,6 +10,8 @@
 | 3:45–4:30 | UAT + rollout/change | “Ik test ook conflicten en offline gedrag. Eén magazijn en twee werven, met ervaren gebruikers als co-ontwerpers en duidelijke rollback.” |
 | 4:30–5:00 | Business case + KPI | “Deze cijfers zijn aannames. Ik onderscheid cashbesparing van vrijgekomen capaciteit en meet pas na een baseline.” |
 
+Open the [public demo](https://phlppgdfry.github.io/buildflow-digital-transformation/) before the interview and select **Reset demo**. Explain that browser state, role selection, ERP and AI are simulations.
+
 Rehearse: limit live clicks to checkout/history and one high-value claim approval view. Use prepared tabs. Close with: “Mijn bijdrage is de samenhang tussen probleem, mensen, proces, IT en gecontroleerde invoering.” Do not claim real production results.
 
 ---

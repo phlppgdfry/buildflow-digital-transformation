@@ -13,7 +13,10 @@
     "test": "node --test tests/api.test.mjs",
     "check": "node scripts/check.mjs",
     "test:ui": "playwright test",
-    "check:bpmn": "python3 scripts/check-bpmn-xsd.py"
+    "check:bpmn": "python3 scripts/check-bpmn-xsd.py",
+    "build:pages": "node scripts/build-pages.mjs",
+    "preview:pages": "npm run build:pages && node scripts/serve-pages.mjs",
+    "test:pages": "playwright test --config playwright.pages.config.mjs"
   },
   "devDependencies": {
     "@apidevtools/swagger-parser": "12.1.0",

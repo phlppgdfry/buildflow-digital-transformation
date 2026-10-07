@@ -2,6 +2,8 @@
 
 > An end-to-end digital transformation case demonstrating how business problems are translated into processes, requirements, architecture, integrations, automation, AI and controlled implementation.
 
+**[Open live demo →](https://phlppgdfry.github.io/buildflow-digital-transformation/)** · [Five-minute interview story](14-demo/demo-script-5-minutes.md)
+
 **This is an independent portfolio case study based on a fictional construction company. It does not contain confidential information from any real employer.** Workshop records, approvals, costs and results are simulated. No real deployment, employer engagement or realised savings are claimed.
 
 BuildFlow Group operates a central warehouse, several business units and construction sites in Belgium. Disconnected spreadsheets obscure asset custody; damage reports arrive through calls, email and messaging. This case proposes two connected improvements: **Construction Inventory Transformation** and **Digital Damage Claims**.
@@ -52,7 +54,11 @@ The repository contains **design artefacts**, **executable prototype evidence**,
 
 ![Local operations dashboard with synthetic seed data](14-demo/screenshots/dashboard-desktop.png)
 
-## Run the prototype
+## Try the public demo
+
+Open the [GitHub Pages demo](https://phlppgdfry.github.io/buildflow-digital-transformation/) without installing anything. Your changes and synthetic evidence stay in your browser. Use **Reset demo** to restore the starting data. ERP and AI are simulations; demo roles are not authentication. [Hosting and capability notes](docs/pages-demo.md).
+
+## Run the local API prototype
 
 Requires **Node.js 24** and npm. No cloud credentials, Docker, database server or AI account needed.
 
@@ -66,7 +72,9 @@ Open **http://127.0.0.1:4310**. The server binds only to loopback. The seeded da
 ```sh
 npm test             # meaningful API/state/integration checks
 npm run check        # links, traceability, OpenAPI and BPMN structural validation
-npm run test:ui      # desktop/mobile browser workflows; install browser first
+npm run test:ui      # local API frontend workflow
+npm run test:pages   # public browser demo, isolation, persistence and reset
+npm run build:pages  # build the static deployment artifact
 ```
 
 ## Repository journey

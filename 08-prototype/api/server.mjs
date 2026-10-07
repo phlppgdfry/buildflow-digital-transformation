@@ -11,7 +11,7 @@ mkdirSync(resolve(dbPath,'..'),{recursive:true});const db=new DatabaseSync(dbPat
 if(process.argv.includes('--reset')) { db.prepare('INSERT OR REPLACE INTO portfolio_state VALUES(1,?)').run(JSON.stringify(seed()));db.close();console.log('Synthetic local demo reset. Stop any running server before reset.');process.exit(0); }
 if(!db.prepare('SELECT id FROM portfolio_state WHERE id=1').get()) db.prepare('INSERT INTO portfolio_state VALUES(1,?)').run(JSON.stringify(seed()));
 const load=()=>JSON.parse(db.prepare('SELECT payload FROM portfolio_state WHERE id=1').get().payload);
-const files={'/':'index.html','/app.js':'app.js','/style.css':'style.css','/evidence-hose.svg':'evidence-hose.svg','/evidence-housing.svg':'evidence-housing.svg'};
+const files={'/':'index.html','/app.js':'app.js','/client.js':'client.js','/style.css':'style.css','/evidence-hose.svg':'evidence-hose.svg','/evidence-housing.svg':'evidence-housing.svg'};
 const types={html:'text/html; charset=utf-8',js:'text/javascript; charset=utf-8',css:'text/css; charset=utf-8',svg:'image/svg+xml'};
 function send(res,status,data,correlationId) {res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store','X-Correlation-ID':correlationId});res.end(JSON.stringify(data));}
 const server=http.createServer(async(req,res)=>{
