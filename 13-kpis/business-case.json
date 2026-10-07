@@ -1,0 +1,14 @@
+{
+  "assetCount": 2000,
+  "assetValueEUR": 2500000,
+  "operationalUsers": 150,
+  "claimsPerYear": 350,
+  "lossCashEUR": 14400,
+  "duplicateCashEUR": 2400,
+  "searchTasks": 4000,
+  "searchMinutesSaved": 10,
+  "hourlyValueEUR": 35,
+  "adminMinutesSaved": 30,
+  "oneOffEUR": 42000,
+  "ongoingEUR": 9600
+}

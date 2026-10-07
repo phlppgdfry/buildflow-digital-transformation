@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_inventory_checkout" targetNamespace="https://buildflow.example/portfolio" exporter="BuildFlow portfolio" exporterVersion="1.0">
+  <bpmn:error id="ERP_Error" name="ERP delivery failure" errorCode="ERP_UNCERTAIN" />
+  <bpmn:collaboration id="Collaboration">
+    <bpmn:participant id="BuildFlow" name="Material checkout" processRef="Process" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process" name="Material checkout" isExecutable="false">
+    <bpmn:laneSet id="LaneSet">
+      <bpmn:lane id="Lane_0" name="Warehouse">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>scan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>handoff</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>exception</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>cancel</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1" name="Operational service">
+        <bpmn:flowNodeRef>validate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>gate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>commit</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Request material">
+      <bpmn:outgoing>Flow_0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="scan" name="Scan asset and choose site/custodian">
+      <bpmn:incoming>Flow_0</bpmn:incoming>
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="validate" name="Validate state, masterdata and version">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="gate" name="Valid checkout?" default="Flow_4">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="commit" name="Atomic Assigned + history + outbox">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="handoff" name="Hand over and verify receipt">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="end" name="Custody assigned">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="exception" name="Resolve unavailable / conflict / offline">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="cancel" name="Not assigned">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0" sourceRef="start" targetRef="scan" />
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="scan" targetRef="validate" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="validate" targetRef="gate" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="gate" targetRef="commit" name="valid">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">valid</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="gate" targetRef="exception" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="commit" targetRef="handoff" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="handoff" targetRef="end" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="exception" targetRef="cancel" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram">
+    <bpmndi:BPMNPlane id="Plane" bpmnElement="Collaboration">
+      <bpmndi:BPMNShape id="PoolDI" bpmnElement="BuildFlow" isHorizontal="true">
+        <dc:Bounds x="30" y="30" width="1456" height="430" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneDI_0" bpmnElement="Lane_0" isHorizontal="true">
+        <dc:Bounds x="60" y="55" width="1426" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneDI_1" bpmnElement="Lane_1" isHorizontal="true">
+        <dc:Bounds x="60" y="235" width="1426" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_start" bpmnElement="start" isHorizontal="true">
+        <dc:Bounds x="185" y="80" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_scan" bpmnElement="scan" isHorizontal="true">
+        <dc:Bounds x="380" y="80" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_validate" bpmnElement="validate" isHorizontal="true">
+        <dc:Bounds x="575" y="260" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_gate" bpmnElement="gate" isHorizontal="true">
+        <dc:Bounds x="770" y="260" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_commit" bpmnElement="commit" isHorizontal="true">
+        <dc:Bounds x="965" y="260" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_handoff" bpmnElement="handoff" isHorizontal="true">
+        <dc:Bounds x="1160" y="80" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_end" bpmnElement="end" isHorizontal="true">
+        <dc:Bounds x="1355" y="80" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_exception" bpmnElement="exception" isHorizontal="true">
+        <dc:Bounds x="965" y="80" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_cancel" bpmnElement="cancel" isHorizontal="true">
+        <dc:Bounds x="1160" y="165" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_0" bpmnElement="Flow_0">
+        <di:waypoint x="221" y="98.0" />
+        <di:waypoint x="380" y="115.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_1" bpmnElement="Flow_1">
+        <di:waypoint x="535" y="115.0" />
+        <di:waypoint x="575" y="295.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_2" bpmnElement="Flow_2">
+        <di:waypoint x="730" y="295.0" />
+        <di:waypoint x="770" y="284.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_3" bpmnElement="Flow_3">
+        <di:waypoint x="818" y="284.0" />
+        <di:waypoint x="965" y="295.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_4" bpmnElement="Flow_4">
+        <di:waypoint x="818" y="284.0" />
+        <di:waypoint x="965" y="115.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_5" bpmnElement="Flow_5">
+        <di:waypoint x="1120" y="295.0" />
+        <di:waypoint x="1160" y="115.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_6" bpmnElement="Flow_6">
+        <di:waypoint x="1315" y="115.0" />
+        <di:waypoint x="1355" y="98.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_7" bpmnElement="Flow_7">
+        <di:waypoint x="1120" y="115.0" />
+        <di:waypoint x="1160" y="183.0" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

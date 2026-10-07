@@ -1,0 +1,142 @@
+[
+  {
+    "br": "BR-01",
+    "fr": "FR-01",
+    "story": "US-01",
+    "ac": "AC-01",
+    "uat": "UAT-INV-001",
+    "kpi": "KPI-01",
+    "process": "03-processes/inventory/to-be.md",
+    "component": "Asset registry and QR"
+  },
+  {
+    "br": "BR-01",
+    "fr": "FR-02",
+    "story": "US-02",
+    "ac": "AC-02",
+    "uat": "UAT-INV-002",
+    "kpi": "KPI-03",
+    "process": "03-processes/inventory/to-be.md",
+    "component": "Atomic checkout command"
+  },
+  {
+    "br": "BR-02",
+    "fr": "FR-03",
+    "story": "US-03",
+    "ac": "AC-03",
+    "uat": "UAT-INV-003",
+    "kpi": "KPI-06",
+    "process": "03-processes/inventory/to-be.md",
+    "component": "Return inspection command"
+  },
+  {
+    "br": "BR-01",
+    "fr": "FR-04",
+    "story": "US-04",
+    "ac": "AC-04",
+    "uat": "UAT-INV-004",
+    "kpi": "KPI-02",
+    "process": "03-processes/inventory/to-be.md",
+    "component": "Transfer + optimistic locking"
+  },
+  {
+    "br": "BR-01",
+    "fr": "FR-05",
+    "story": "US-05",
+    "ac": "AC-05",
+    "uat": "UAT-INV-005",
+    "kpi": "KPI-01",
+    "process": "03-processes/inventory/to-be.md",
+    "component": "Audit ledger"
+  },
+  {
+    "br": "BR-02",
+    "fr": "FR-06",
+    "story": "US-06",
+    "ac": "AC-06",
+    "uat": "UAT-INV-006",
+    "kpi": "KPI-04",
+    "process": "03-processes/inventory/to-be.md",
+    "component": "State rules / authorised release"
+  },
+  {
+    "br": "BR-03",
+    "fr": "FR-07",
+    "story": "US-07",
+    "ac": "AC-07",
+    "uat": "UAT-CLM-001",
+    "kpi": "KPI-08",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "Claim + evidence service"
+  },
+  {
+    "br": "BR-03",
+    "fr": "FR-08",
+    "story": "US-08",
+    "ac": "AC-08",
+    "uat": "UAT-CLM-002",
+    "kpi": "KPI-09",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "Claim workflow"
+  },
+  {
+    "br": "BR-04",
+    "fr": "FR-09",
+    "story": "US-09",
+    "ac": "AC-09",
+    "uat": "UAT-CLM-003",
+    "kpi": "KPI-13",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "Approval policy"
+  },
+  {
+    "br": "BR-04",
+    "fr": "FR-10",
+    "story": "US-10",
+    "ac": "AC-10",
+    "uat": "UAT-CLM-004",
+    "kpi": "KPI-10",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "Outbox / ERP adapter"
+  },
+  {
+    "br": "BR-03",
+    "fr": "FR-11",
+    "story": "US-11",
+    "ac": "AC-11",
+    "uat": "UAT-CLM-005",
+    "kpi": "KPI-09",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "Scheduled SLA flow"
+  },
+  {
+    "br": "BR-05",
+    "fr": "FR-12",
+    "story": "US-12",
+    "ac": "AC-12",
+    "uat": "UAT-INV-007",
+    "kpi": "KPI-15",
+    "process": "03-processes/inventory/exceptions.md",
+    "component": "Local draft + outage reconciliation"
+  },
+  {
+    "br": "BR-03",
+    "fr": "FR-13",
+    "story": "US-13",
+    "ac": "AC-13",
+    "uat": "UAT-CLM-006",
+    "kpi": "KPI-08",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "AI suggestion boundary"
+  },
+  {
+    "br": "BR-06",
+    "fr": "FR-14",
+    "story": "US-14",
+    "ac": "AC-14",
+    "uat": "UAT-CLM-007",
+    "kpi": "KPI-14",
+    "process": "03-processes/damage-claims/to-be.md",
+    "component": "Curated KPI read model"
+  }
+]

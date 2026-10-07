@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_inventory_return" targetNamespace="https://buildflow.example/portfolio" exporter="BuildFlow portfolio" exporterVersion="1.0">
+  <bpmn:error id="ERP_Error" name="ERP delivery failure" errorCode="ERP_UNCERTAIN" />
+  <bpmn:collaboration id="Collaboration">
+    <bpmn:participant id="BuildFlow" name="Material return" processRef="Process" />
+    <bpmn:participant id="External" name="Claims coordinator" />
+    <bpmn:messageFlow id="Message_1" name="New linked Draft claim" sourceRef="notify" targetRef="External" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process" name="Material return" isExecutable="false">
+    <bpmn:laneSet id="LaneSet">
+      <bpmn:lane id="Lane_0" name="Warehouse inspection">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>inspect</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>damage</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>quarantine</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>damagedEnd</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1" name="Operational service">
+        <bpmn:flowNodeRef>clean</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>broken</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>notify</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Asset arrives">
+      <bpmn:outgoing>Flow_0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="inspect" name="Inspect and record condition">
+      <bpmn:incoming>Flow_0</bpmn:incoming>
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="damage" name="Damaged?" default="Flow_3">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="clean" name="Atomic Available + history">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="broken" name="Atomic Damaged + Draft claim + history">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sendTask id="notify" name="Notify claims coordinator">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:endEvent id="end" name="Available">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="quarantine" name="Quarantine and complete claim evidence">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="damagedEnd" name="Damaged; draft claim linked">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0" sourceRef="start" targetRef="inspect" />
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="inspect" targetRef="damage" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="damage" targetRef="broken" name="damaged">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">damaged</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="damage" targetRef="clean" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="clean" targetRef="end" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="broken" targetRef="notify" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="notify" targetRef="quarantine" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="quarantine" targetRef="damagedEnd" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram">
+    <bpmndi:BPMNPlane id="Plane" bpmnElement="Collaboration">
+      <bpmndi:BPMNShape id="PoolDI" bpmnElement="BuildFlow" isHorizontal="true">
+        <dc:Bounds x="30" y="30" width="1456" height="430" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneDI_0" bpmnElement="Lane_0" isHorizontal="true">
+        <dc:Bounds x="60" y="55" width="1426" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="LaneDI_1" bpmnElement="Lane_1" isHorizontal="true">
+        <dc:Bounds x="60" y="235" width="1426" height="180" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_start" bpmnElement="start" isHorizontal="true">
+        <dc:Bounds x="185" y="80" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_inspect" bpmnElement="inspect" isHorizontal="true">
+        <dc:Bounds x="380" y="80" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_damage" bpmnElement="damage" isHorizontal="true">
+        <dc:Bounds x="575" y="80" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_clean" bpmnElement="clean" isHorizontal="true">
+        <dc:Bounds x="770" y="260" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_broken" bpmnElement="broken" isHorizontal="true">
+        <dc:Bounds x="770" y="335" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_notify" bpmnElement="notify" isHorizontal="true">
+        <dc:Bounds x="965" y="260" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_end" bpmnElement="end" isHorizontal="true">
+        <dc:Bounds x="965" y="260" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_quarantine" bpmnElement="quarantine" isHorizontal="true">
+        <dc:Bounds x="1160" y="80" width="155" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DI_damagedEnd" bpmnElement="damagedEnd" isHorizontal="true">
+        <dc:Bounds x="1355" y="80" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_0" bpmnElement="Flow_0">
+        <di:waypoint x="221" y="98.0" />
+        <di:waypoint x="380" y="115.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_1" bpmnElement="Flow_1">
+        <di:waypoint x="535" y="115.0" />
+        <di:waypoint x="575" y="104.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_2" bpmnElement="Flow_2">
+        <di:waypoint x="623" y="104.0" />
+        <di:waypoint x="770" y="370.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_3" bpmnElement="Flow_3">
+        <di:waypoint x="623" y="104.0" />
+        <di:waypoint x="770" y="295.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_4" bpmnElement="Flow_4">
+        <di:waypoint x="925" y="295.0" />
+        <di:waypoint x="965" y="278.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_5" bpmnElement="Flow_5">
+        <di:waypoint x="925" y="370.0" />
+        <di:waypoint x="965" y="295.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_6" bpmnElement="Flow_6">
+        <di:waypoint x="1120" y="295.0" />
+        <di:waypoint x="1160" y="115.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_7" bpmnElement="Flow_7">
+        <di:waypoint x="1315" y="115.0" />
+        <di:waypoint x="1355" y="98.0" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ExternalDI" bpmnElement="External" isHorizontal="true">
+        <dc:Bounds x="30" y="540" width="1456" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageDI" bpmnElement="Message_1">
+        <di:waypoint x="1042.5" y="330" />
+        <di:waypoint x="1042.5" y="540" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

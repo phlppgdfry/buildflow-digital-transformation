@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "summary",
+    "suggestedCategory",
+    "suggestedSeverity",
+    "missingInformation",
+    "sourceIds",
+    "reviewRequired"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "suggestedCategory": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Mechanical",
+        "Electrical",
+        "Structural",
+        "Other",
+        null
+      ]
+    },
+    "suggestedSeverity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL",
+        null
+      ]
+    },
+    "missingInformation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewRequired": {
+      "const": true
+    }
+  }
+}

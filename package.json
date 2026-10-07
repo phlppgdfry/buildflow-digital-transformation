@@ -1,0 +1,23 @@
+{
+  "name": "buildflow-digital-transformation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Independent fictional Digital Transformation Analyst portfolio with an executable local demonstrator",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "start": "node 08-prototype/api/server.mjs",
+    "reset": "node 08-prototype/api/server.mjs --reset",
+    "test": "node --test tests/api.test.mjs",
+    "check": "node scripts/check.mjs",
+    "test:ui": "playwright test",
+    "check:bpmn": "python3 scripts/check-bpmn-xsd.py"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "12.1.0",
+    "@playwright/test": "1.56.1",
+    "bpmn-moddle": "9.0.4"
+  }
+}

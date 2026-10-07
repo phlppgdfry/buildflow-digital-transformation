@@ -1,0 +1,2 @@
+import { defineConfig } from '@playwright/test';
+export default defineConfig({testDir:'tests/browser',workers:1,use:{baseURL:'http://127.0.0.1:4312',viewport:{width:1440,height:1000}},webServer:{command:'node 08-prototype/api/server.mjs --reset && node 08-prototype/api/server.mjs',url:'http://127.0.0.1:4312/health',env:{PORT:'4312',BUILDFLOW_DB:process.env.BUILDFLOW_UI_DB||'/tmp/buildflow-ui-test.sqlite'},reuseExistingServer:false},reporter:'list'});
