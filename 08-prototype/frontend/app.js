@@ -10,7 +10,7 @@ const table=(heads,rows)=>`<div class="table-scroll"><table><thead><tr>${heads.m
 const siteName=id=>state.sites.find(s=>s.id===id)?.name||id;
 const siteOptions=state=>state.sites.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('');
 function feedback(text,error=false){message.textContent=text;message.className=error?'error':'';}
-async function load(){state=await readState();render();}
+async function load(){state=await readState();render();app.setAttribute('aria-busy','false');}
 let saving=false;
 async function mutate(path,body,method='POST'){
  if(saving)return null;
@@ -82,4 +82,4 @@ if(browserMode){
   finally{saving=false;}
  };
 }
-window.addEventListener('hashchange',()=>{feedback('');render();});load().catch(e=>feedback(e.message,true));
+window.addEventListener('hashchange',()=>{feedback('');render();});load().catch(e=>{app.setAttribute('aria-busy','false');app.textContent='Demo data could not be loaded. Reload the page to try again.';feedback(e.message,true);});
