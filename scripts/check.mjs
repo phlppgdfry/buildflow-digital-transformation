@@ -3,7 +3,7 @@ import { resolve, dirname, join } from 'node:path';
 import assert from 'node:assert/strict';
 import BpmnModdle from 'bpmn-moddle';
 import SwaggerParser from '@apidevtools/swagger-parser';
-const root=process.cwd();function files(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>['.git','node_modules','data','test-results'].includes(e.name)?[]:e.isDirectory()?files(join(dir,e.name)):[join(dir,e.name)]);}
+const root=process.cwd();function files(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>['.git','node_modules','data','test-results','.scratch','.codex-finalizer','dist','playwright-report'].includes(e.name)?[]:e.isDirectory()?files(join(dir,e.name)):[join(dir,e.name)]);}
 const all=files(root);let links=0;
 for(const file of all.filter(f=>f.endsWith('.md'))){const text=readFileSync(file,'utf8');for(const match of text.matchAll(/!?\[[^\]]*\]\(([^)]+)\)/g)){const target=match[1].split('#')[0];if(!target||/^(https?:|mailto:)/.test(target))continue;const path=target.startsWith('/')?resolve(root,'.'+target):resolve(dirname(file),target);assert.ok(existsSync(path),`Broken link ${file} -> ${target}`);links++;}}
 const t=JSON.parse(readFileSync('02-requirements/traceability.json'));const fields={br:'02-requirements/business-requirements.md',fr:'02-requirements/functional-requirements.md',story:'02-requirements/user-stories.md',ac:'02-requirements/acceptance-criteria.md',uat:'09-testing/uat-scenarios.md',kpi:'13-kpis/target-kpis.md'};

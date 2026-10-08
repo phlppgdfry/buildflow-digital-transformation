@@ -16,7 +16,9 @@
     "check:bpmn": "python3 scripts/check-bpmn-xsd.py",
     "build:pages": "node scripts/build-pages.mjs",
     "preview:pages": "npm run build:pages && node scripts/serve-pages.mjs",
-    "test:pages": "playwright test --config playwright.pages.config.mjs"
+    "test:pages": "playwright test --config playwright.pages.config.mjs",
+    "check:kit": "node scripts/check-kit.mjs",
+    "test:kit": "playwright test --config playwright.kit.config.mjs"
   },
   "devDependencies": {
     "@apidevtools/swagger-parser": "12.1.0",

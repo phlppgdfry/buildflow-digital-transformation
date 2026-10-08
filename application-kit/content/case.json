@@ -1,0 +1,570 @@
+{
+  "title": "Construction Digital Transformation",
+  "subtitle": "From fragmented operational processes to an integrated inventory and damage-claims workflow.",
+  "scope": "Inventory + Damage Claims",
+  "role": "Independent analysis, process design, solution design and implementation planning",
+  "disclosure": "Independent portfolio case. BuildFlow Group is fictional. Targets are illustrative and no client deployment or realised savings are claimed.",
+  "journey": [
+    "Discover",
+    "Analyse",
+    "Design",
+    "Integrate",
+    "Automate",
+    "Implement",
+    "Measure"
+  ],
+  "challenge": "BuildFlow Group tracks reusable equipment and damage incidents through spreadsheets, paper and disconnected messages. Location and custody become unclear, evidence lacks consistent ownership, and Finance manually reconciles repairs. The case investigates those handoffs and designs an integrated operational workflow with a controlled implementation plan.",
+  "deliverables": [
+    "Stakeholder workshop methodology",
+    "BPMN AS-IS / TO-BE models",
+    "Requirements and traceability",
+    "ERP / API architecture",
+    "Power Automate blueprints and reviewed AI",
+    "UAT, rollout and change plan"
+  ],
+  "evidence": [
+    {
+      "id": "E01",
+      "title": "Workshop root cause",
+      "path": "01-discovery/workshop-notes-example.md",
+      "why": "Turns missing equipment into custody handoffs and testable requirements.",
+      "demo": "Discovery",
+      "status": "Simulated workshop"
+    },
+    {
+      "id": "E02",
+      "title": "Stakeholder engagement",
+      "path": "01-discovery/stakeholder-matrix.md",
+      "why": "Shows conflicting needs and participation of field users.",
+      "demo": "Stakeholders",
+      "status": "Analysis design"
+    },
+    {
+      "id": "E03",
+      "title": "Requirements traceability",
+      "path": "02-requirements/requirements-traceability-matrix.md",
+      "why": "Links need, requirement, process, component, UAT and KPI.",
+      "demo": "Requirements",
+      "status": "Analysis design"
+    },
+    {
+      "id": "E04",
+      "title": "Return inspection BPMN",
+      "path": "03-processes/bpmn/inventory-return.bpmn",
+      "why": "Models safe release versus damaged quarantine and linked Draft claim.",
+      "demo": "Processes",
+      "status": "Validated non-executable BPMN"
+    },
+    {
+      "id": "E05",
+      "title": "Solution architecture and ADRs",
+      "path": "04-solution-design/architecture.md",
+      "why": "Preserves ERP ownership and exposes application/integration boundaries.",
+      "demo": "Architecture",
+      "status": "Proposed target architecture"
+    },
+    {
+      "id": "E06",
+      "title": "ERP integration and API contract",
+      "path": "05-integrations/erp-integration.md",
+      "why": "Distinguishes estimate, commitment and actual invoice; defines retry/reconciliation.",
+      "demo": "Integrations",
+      "status": "Design plus mocked adapter"
+    },
+    {
+      "id": "E07",
+      "title": "High-value approval blueprint",
+      "path": "06-automation/power-automate/02-high-value.md",
+      "why": "Requires Manager and Finance strictly above EUR 5,000 with versioned decisions.",
+      "demo": "Automation",
+      "status": "Power Automate design blueprint"
+    },
+    {
+      "id": "E08",
+      "title": "AI opportunity assessment",
+      "path": "07-ai/ai-opportunity-assessment.md",
+      "why": "Selects assistive drafting and excludes autonomous liability/accounting.",
+      "demo": "AI",
+      "status": "Assessment plus deterministic mock"
+    },
+    {
+      "id": "E09",
+      "title": "UAT scenarios",
+      "path": "09-testing/uat-scenarios.md",
+      "why": "24 prepared scenarios include concurrency, offline, self-approval and invoice mismatch.",
+      "demo": "Testing",
+      "status": "Prepared business UAT, not executed"
+    },
+    {
+      "id": "E10",
+      "title": "Adoption and pilot",
+      "path": "11-change-management/adoption-plan.md",
+      "why": "Respects operator knowledge and measures task success and same-shift capture.",
+      "demo": "Rollout",
+      "status": "Change and rollout design"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "KPI-01",
+      "name": "Inventory accuracy",
+      "baseline": "92%",
+      "target": "≥98%",
+      "measurement": "Verified physical location+custodian matches / sampled active assets; weekly stratified sample",
+      "owner": "Warehouse",
+      "source": "13-kpis/target-kpis.md",
+      "label": "Illustrative assumption and target, not achieved results"
+    },
+    {
+      "id": "KPI-08",
+      "name": "Claim resolution time",
+      "baseline": "18 business days",
+      "target": "≤10",
+      "measurement": "Median submission→Closed business days; show open backlog age and p90 separately",
+      "owner": "Operations",
+      "source": "13-kpis/target-kpis.md",
+      "label": "Illustrative assumption and target, not achieved results"
+    },
+    {
+      "id": "KPI-14",
+      "name": "Same-shift capture",
+      "baseline": "55%",
+      "target": "≥95%",
+      "measurement": "Verified movements recorded by shift end / physical movements in sample; not login count",
+      "owner": "Warehouse",
+      "source": "13-kpis/target-kpis.md",
+      "label": "Illustrative assumption and target, not achieved results"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "summary": "Two connected operational cases, one controlled transformation approach.",
+      "decision": "Physical custody and financial accountability need explicit handoffs.",
+      "points": [
+        "Inventory and damage claims share the asset identifier.",
+        "Design documented. Prototype tested. Production validation pending.",
+        "Finance retains ERP accounting ownership."
+      ],
+      "evidenceIds": [
+        "E01",
+        "E05",
+        "E10"
+      ],
+      "sources": [
+        "CASE_STUDY.md"
+      ]
+    },
+    {
+      "id": "discovery",
+      "title": "Discovery",
+      "summary": "Investigate the work before choosing a tool.",
+      "decision": "Treat the root cause as a hypothesis and validate it with sampled handoffs.",
+      "points": [
+        "Walk a request, transfer and damaged return with warehouse and site users.",
+        "Use Five Whys, process mapping and MoSCoW to prioritise.",
+        "Record disagreements, owners, validation actions and open questions."
+      ],
+      "evidenceIds": [
+        "E01"
+      ],
+      "sources": [
+        "01-discovery/workshop-plan.md",
+        "01-discovery/workshop-agenda.md"
+      ]
+    },
+    {
+      "id": "stakeholders",
+      "title": "Stakeholders",
+      "summary": "Include field expertise alongside management and IT.",
+      "decision": "Low influence does not mean low importance.",
+      "points": [
+        "Warehouse: fast inspection and usable labels. Site users: unreliable connectivity.",
+        "Finance: spending delegation and invoice reconciliation. IT: supportable integration.",
+        "Operations owns process policy. Finance owns financial controls. The analyst facilitates."
+      ],
+      "evidenceIds": [
+        "E02"
+      ],
+      "sources": [
+        "01-discovery/stakeholder-map.md",
+        "12-governance/raci.md"
+      ]
+    },
+    {
+      "id": "processes",
+      "title": "Processes",
+      "summary": "A return starts with condition inspection.",
+      "decision": "Damage blocks reissue even if the financial claim is rejected.",
+      "points": [
+        "AS-IS: informal handoff, stale location and inconsistent return inspection.",
+        "TO-BE: named custody, inspected return and a linked Draft claim.",
+        "Transfers change custody only after destination receipt."
+      ],
+      "evidenceIds": [
+        "E04"
+      ],
+      "sources": [
+        "03-processes/inventory/as-is.md",
+        "03-processes/inventory/to-be.md",
+        "03-processes/damage-claims/to-be.md"
+      ]
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements",
+      "summary": "Follow a need all the way to acceptance and outcome.",
+      "decision": "Custody is a process rule, not only a screen field.",
+      "points": [
+        "PB-01 / BR-01: establish current location and custodian.",
+        "FR-04 / AC-04: retain sender custody until receipt.",
+        "UAT-INV-004 / KPI-02: test wrong-site receipt and measure missing assets."
+      ],
+      "evidenceIds": [
+        "E03"
+      ],
+      "sources": [
+        "02-requirements/acceptance-criteria.md",
+        "02-requirements/non-functional-requirements.md"
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture",
+      "summary": "Separate operational transactions from ERP accounting.",
+      "decision": "Keep atomic custody rules in command handlers and human orchestration in flows.",
+      "points": [
+        "Target: Power Apps, Dataverse custom APIs/plugins, Power Automate, SharePoint and Entra ID.",
+        "ERP adapter handles approved commitments and returns posted invoice actuals.",
+        "Executable evidence: browser simulation and local Node/SQLite API, not a deployed Microsoft tenant."
+      ],
+      "evidenceIds": [
+        "E05"
+      ],
+      "sources": [
+        "04-solution-design/decision-log.md",
+        "04-solution-design/data-model.md",
+        "04-solution-design/security.md"
+      ]
+    },
+    {
+      "id": "integrations",
+      "title": "Integrations",
+      "summary": "A timeout does not establish whether ERP accepted a request.",
+      "decision": "Query a stable external reference before resending an uncertain financial command.",
+      "points": [
+        "ERP owns projects, suppliers, cost centres, capital values and posted invoices.",
+        "Operational app owns movements, claims and approval history.",
+        "Outbox, deduplication, retry, dead-letter handling and reconciliation expose failures."
+      ],
+      "evidenceIds": [
+        "E06"
+      ],
+      "sources": [
+        "05-integrations/api-contracts/openapi.json",
+        "05-integrations/error-handling.md",
+        "05-integrations/operations-runbook.md"
+      ]
+    },
+    {
+      "id": "automation",
+      "title": "Automation",
+      "summary": "Automate routing and reminders while preserving human authority.",
+      "decision": "Require Finance in addition to Manager strictly above EUR 5,000.",
+      "points": [
+        "Submitted claim: validate, resolve owner and create a durable approval task.",
+        "Approval: named decisions on the same revision; changed facts require reapproval.",
+        "Hourly SLA checks: deduplicated reminder/escalation with persistent state."
+      ],
+      "evidenceIds": [
+        "E07"
+      ],
+      "sources": [
+        "06-automation/power-automate/README.md",
+        "06-automation/power-automate/03-overdue.md"
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "AI",
+      "summary": "Use AI to structure facts and expose missing information.",
+      "decision": "AI recommendation is not a business decision.",
+      "points": [
+        "Assess value, data quality, risk and effort before choosing AI.",
+        "Human reviews suggestions. No AI liability, sanctions, spend approval or financial posting.",
+        "Live assistant is a deterministic mock. Claude/provider integration and evaluation remain target work."
+      ],
+      "evidenceIds": [
+        "E08"
+      ],
+      "sources": [
+        "07-ai/human-in-the-loop.md",
+        "07-ai/guardrails.md",
+        "07-ai/evaluation.md"
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing",
+      "summary": "Test exceptions that could harm custody, finance or users.",
+      "decision": "Local automated tests do not constitute business acceptance.",
+      "points": [
+        "24 prepared UAT cases cover both inventory and damage claims.",
+        "Prototype checks exercise stale versions, replay, unsafe returns and approval boundaries.",
+        "Business owner, Warehouse, Finance and IT retain their separate acceptance gates."
+      ],
+      "evidenceIds": [
+        "E09"
+      ],
+      "sources": [
+        "09-testing/test-strategy.md",
+        "09-testing/sign-off-template.md"
+      ]
+    },
+    {
+      "id": "rollout",
+      "title": "Rollout",
+      "summary": "Start with one warehouse and two representative sites.",
+      "decision": "Users co-design the workflow and practise exceptions before rollout.",
+      "points": [
+        "Discovery, prototype, pilot preparation, supervised pilot, evaluation and rollout.",
+        "Migrate through staging and quarantine duplicates. Preserve transactions during rollback.",
+        "Champions, task training, feedback and ten working days of hypercare support adoption."
+      ],
+      "evidenceIds": [
+        "E10"
+      ],
+      "sources": [
+        "10-implementation/implementation-plan.md",
+        "10-implementation/rollout-plan.md",
+        "10-implementation/rollback-plan.md",
+        "11-change-management/training-plan.md"
+      ]
+    },
+    {
+      "id": "kpis",
+      "title": "KPIs",
+      "summary": "Measure outcomes with defined denominators and accountable owners.",
+      "decision": "Separate released capacity from cash savings.",
+      "points": [
+        "Baseline through sampling before approving targets.",
+        "Compare physical location accuracy, business-day claim resolution and same-shift capture.",
+        "Review benefits at 30/60/90 days and report confounders and missed targets."
+      ],
+      "evidenceIds": [
+        "E03",
+        "E10"
+      ],
+      "sources": [
+        "13-kpis/target-kpis.md",
+        "13-kpis/business-case.md",
+        "13-kpis/benefits-realisation.md"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "index": 1,
+      "title": "The business problem",
+      "message": "Custody and claim ownership are fragmented.",
+      "visual": "problem",
+      "points": [
+        "Inventory lives in spreadsheets and informal handoffs.",
+        "Damage evidence arrives through disconnected channels.",
+        "People spend time searching and chasing status."
+      ],
+      "notes": "Ik gebruik een fictieve bouwgroep om een herkenbaar operationeel probleem te onderzoeken. Materiaal wordt uitgeleend en tussen werven verplaatst, terwijl de registratie achterblijft. Schade wordt via losse berichten opgevolgd. Mijn centrale vraag is: welke afspraken en informatie ontbreken om dit betrouwbaar te organiseren? Deze case is onafhankelijk portfolio-werk. De workshops en bedrijfsgegevens zijn gesimuleerd.",
+      "sources": [
+        "01-discovery/business-context.md"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "How I approached it",
+      "message": "Stakeholder needs become testable process rules.",
+      "visual": "discovery",
+      "points": [
+        "Warehouse and site users reconstruct handoffs.",
+        "Finance and IT expose controls and dependencies.",
+        "Requirements connect to acceptance and KPI definitions."
+      ],
+      "notes": "Ik ontwierp de stakeholderaanpak en een fictieve workshop. De magazijnmedewerker wil weinig extra registratie. Finance wil controle op kosten. IT wil een onderhoudbare oplossing. Met een proceswalkthrough en Five Whys vertaal ik materiaal raakt zoek naar een concrete hypothese: directe transfers missen een bevestigde ontvangst. De traceability matrix koppelt die behoefte vervolgens aan een regel, component, test en KPI. In een echt project zou ik die hypothese eerst met gebruikers en handoff-data toetsen.",
+      "sources": [
+        "01-discovery/workshop-notes-example.md",
+        "02-requirements/requirements-traceability-matrix.md"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "AS-IS and TO-BE",
+      "message": "Inspection determines availability and starts the claim.",
+      "visual": "process",
+      "points": [
+        "AS-IS: informal return and incomplete condition record.",
+        "TO-BE: inspect, quarantine damage and create a linked Draft.",
+        "Custody records support investigation, not automatic liability."
+      ],
+      "notes": "Bij een beschadigde retour komen beide cases samen. Het magazijn inspecteert het materiaal. Een schone retour maakt het opnieuw beschikbaar. Schade houdt het buiten circulatie en creëert een gekoppelde Draft claim. Ik scheid de waarneming van schade van aansprakelijkheid: de laatste gebruiker is niet automatisch schuldig. Het BPMN-model toont wie handelt, waar een beslissing valt en welke automatisering helpt. De volledige workflow en uitzonderingen blijven in de bronrepository beschikbaar.",
+      "sources": [
+        "03-processes/bpmn/inventory-return.bpmn",
+        "03-processes/damage-claims/to-be.md"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "Solution architecture",
+      "message": "ERP remains the financial system of record.",
+      "visual": "architecture",
+      "points": [
+        "App owns custody, claims and approval state.",
+        "ERP owns masters, commitments and posted invoices.",
+        "Identity, evidence and monitoring cross every boundary."
+      ],
+      "notes": "Het doelontwerp sluit aan op de Microsoft-omgeving: Power Apps voor gebruikers, Dataverse voor operationele gegevens en Power Automate voor menselijke opvolging. Transactieregels zorgen dat status en historiek samen veranderen. Het ERP blijft eigenaar van financiële stamdata en facturen. Een adapter verwerkt goedgekeurde herstelverzoeken asynchroon. De lokale API en publieke browserdemo maken dit tastbaar. Ze zijn geen gedeployde Power Platform-oplossing of echte ERP-koppeling.",
+      "sources": [
+        "04-solution-design/architecture.md",
+        "05-integrations/erp-integration.md"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Automation and AI",
+      "message": "Human decisions remain visible and accountable.",
+      "visual": "automation",
+      "points": [
+        "Durable approval routing and deduplicated reminders.",
+        "Manager plus Finance for estimates above EUR 5,000.",
+        "Optional AI draft with explicit review and manual fallback."
+      ],
+      "notes": "Automatisering helpt bij validatie, taakroutering en herinneringen. Boven vijfduizend euro vraagt deze fictieve delegatieregel een extra Finance-beslissing. De grens zou ik bij een echte klant toetsen. AI mag feiten structureren en ontbrekende informatie aanwijzen. Een mens accepteert of verwerpt het voorstel. AI mag geen aansprakelijkheid bepalen of kosten boeken. De live assistent gebruikt een deterministische simulatie. Een echte provider vraagt eerst privacy-, kwaliteits- en waardevalidatie.",
+      "sources": [
+        "06-automation/power-automate/02-high-value.md",
+        "07-ai/ai-opportunity-assessment.md"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "From design to production",
+      "message": "Readiness depends on user acceptance and support.",
+      "visual": "implementation",
+      "points": [
+        "24 UAT scenarios prepared, including exceptions.",
+        "Pilot: one warehouse and two sites.",
+        "Training, rollback, hypercare and adoption measurement."
+      ],
+      "notes": "Ik zou de invoering begrenzen tot één magazijn en twee representatieve werven. Vooraf valideer ik data, rollen, ERP-capaciteit en gebruikstaken. UAT behandelt ook dubbele checkout, ontbrekende evidence en storingen. Er zijn plannen voor migratie, training, rollback en hypercare. Een ervaren operator betrek ik bij het ontwerp en vergelijk taakduur in de pilot. Business, Warehouse, Finance en IT hebben eigen acceptatieverantwoordelijkheden. De portfolio-UAT is voorbereid, niet door echte eindgebruikers uitgevoerd.",
+      "sources": [
+        "09-testing/uat-scenarios.md",
+        "10-implementation/rollout-plan.md",
+        "11-change-management/adoption-plan.md"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "Business value",
+      "message": "Targets require a baseline and follow-up measurement.",
+      "visual": "kpis",
+      "points": [
+        "Illustrative targets, not achieved results.",
+        "Warehouse and Operations own operational measures.",
+        "Finance distinguishes cash avoidance from capacity."
+      ],
+      "notes": "Ik meet locatiebetrouwbaarheid, claimdoorlooptijd en registratie tijdens dezelfde shift. De getoonde baselines en targets zijn illustratief. De businesscase houdt vermeden aankopen apart van vrijgekomen zoektijd en administratie. Die tijd is geen automatische cashbesparing. Bij een echt project verzamelt de baseline representatieve samples, en vergelijken we op dertig, zestig en negentig dagen. Projectmix en seizoenen kunnen de vergelijking beïnvloeden. Ik rapporteer onzekerheid en gemiste doelen mee.",
+      "sources": [
+        "13-kpis/target-kpis.md",
+        "13-kpis/business-case.md"
+      ]
+    },
+    {
+      "index": 8,
+      "title": "Why this case matters",
+      "message": "One traceable journey connects business and IT.",
+      "visual": "rolefit",
+      "points": [
+        "Discovery and requirements evidence.",
+        "Process, API and ERP decisions.",
+        "User acceptance, adoption and measurement planning."
+      ],
+      "notes": "Deze case laat zien hoe ik een onduidelijk probleem kan structureren en bespreekbaar maken. Ik verbind stakeholderbehoeften met een proces, technische grenzen, tests en invoeringskeuzes. Wat ik kan tonen is analyse- en ontwerpbewijs plus een getest prototype. Een echte workshop, tenantimplementatie, ERP-sandbox en productie-uitrol zijn nog geen bewezen praktijkervaring. In een gesprek kan ik iedere ontwerpkeuze verdedigen en aangeven welke informatie de beslissing bij een echte klant zou veranderen.",
+      "sources": [
+        "application-kit/role-requirement-matrix.md",
+        "04-solution-design/decision-log.md"
+      ]
+    }
+  ],
+  "facts": {
+    "functionalRequirements": 14,
+    "businessRequirements": 6,
+    "bpmnModels": 5,
+    "uatPrepared": 24,
+    "operationalCases": 2,
+    "approvalThresholdEUR": 5000,
+    "pilotWarehouses": 1,
+    "pilotSites": 2
+  },
+  "boundaries": [
+    {
+      "label": "Documented design",
+      "detail": "Microsoft target architecture, ERP contracts, Power Automate flows, rollout and change."
+    },
+    {
+      "label": "Executed prototype",
+      "detail": "Local Node/SQLite API and browser simulation with tests."
+    },
+    {
+      "label": "Pending production validation",
+      "detail": "Real workshops, tenant flows, ERP sandbox, security/recovery tests, business UAT and measured benefits."
+    }
+  ],
+  "links": {
+    "repo": "https://github.com/phlppgdfry/buildflow-digital-transformation",
+    "live": "https://phlppgdfry.github.io/buildflow-digital-transformation/",
+    "portfolio": "https://phlppgdfry.github.io/buildflow-digital-transformation/application-kit/",
+    "workspace": "https://phlppgdfry.github.io/buildflow-digital-transformation/application-kit/workspace/"
+  },
+  "pages": [
+    {
+      "index": 1,
+      "title": "Executive overview",
+      "body": "BuildFlow Group tracks reusable equipment and damage incidents through spreadsheets, paper and disconnected messages. Location and custody become unclear, evidence lacks consistent ownership, and Finance manually reconciles repairs. The case investigates those handoffs and designs an integrated operational workflow with a controlled implementation plan.\n\n**Scope:** reusable inventory and damage claims. **Role:** independent analysis, process design, solution architecture and controlled implementation planning.\n\nJourney: Discover → Analyse → Design → Integrate → Automate → Implement → Measure.\n\nStatus: design documented, prototype tested, enterprise validation pending.",
+      "source": "01-discovery/business-context.md"
+    },
+    {
+      "index": 2,
+      "title": "Discovery and business analysis",
+      "body": "Warehouse, site employees, project managers, Finance, Procurement, Operations and IT bring different constraints. The fictional workshop uses a walkthrough, Five Whys and MoSCoW. “Material goes missing” becomes an accountable transfer requirement.\n\nPB-01 / BR-01 → FR-04 / AC-04 → transfer receipt component → UAT-INV-004 → KPI-02. The cause remains a hypothesis until sampled handoffs confirm it.\n\nThe analyst facilitates. Operations decides custody policy; Finance owns spend controls.",
+      "source": "01-discovery/workshop-notes-example.md"
+    },
+    {
+      "index": 3,
+      "title": "AS-IS and TO-BE",
+      "body": "AS-IS: spreadsheets and informal handoffs obscure current custody and return condition. TO-BE: a named custodian, confirmed transfer receipt and inspection gate establish operational truth.\n\nThe executive BPMN view focuses on the return: inspect condition, then either release Available or retain Damaged and create a linked Draft claim. Safety release is independent of claim closure. Offline stock movement remains unconfirmed until reviewed online.",
+      "source": "03-processes/bpmn/inventory-return.bpmn"
+    },
+    {
+      "index": 4,
+      "title": "Solution architecture",
+      "body": "Target: Power Apps, Dataverse command rules, Power Automate, SharePoint and Entra ID. A dedicated adapter sends approved repair commitments to ERP and returns posted actuals.\n\nERP owns projects, suppliers, cost centres, capital values and invoice accounting. The operational solution owns custody, claims and approval history. Atomic writes protect state/history/outbox; asynchronous delivery tolerates ERP maintenance.\n\nThe tested local API and public browser simulation are implementation evidence of process rules, not a deployed Microsoft tenant.",
+      "source": "04-solution-design/architecture.md"
+    },
+    {
+      "index": 5,
+      "title": "Automation and AI",
+      "body": "Claim submission produces validation, ownership, a durable approval task and notification. Manager approval is required; above EUR 5,000 Finance must also approve the same revision. Changed amount/evidence invalidates prior approvals.\n\nOptional AI structures facts and flags missing information. Human review precedes any business decision. AI cannot determine liability, sanction employees, approve spend or post invoices. Live demo uses deterministic suggestions; provider, privacy and quality evaluation remain open.",
+      "source": "06-automation/power-automate/02-high-value.md"
+    },
+    {
+      "index": 6,
+      "title": "Controlled implementation",
+      "body": "Pilot one warehouse and two representative sites. Gate entry on unique labelled assets, role mapping, ERP contract checks and task training. Run 24 prepared UAT scenarios including concurrency and exception cases.\n\nMigration stages and quarantines questionable data. Rollback preserves accepted movements and reconciles ERP references. Champions, observed task practice, feedback and ten working days of hypercare support adoption. Business, Warehouse, Finance and IT sign their own gates.",
+      "source": "10-implementation/rollout-plan.md"
+    },
+    {
+      "index": 7,
+      "title": "What this demonstrates",
+      "body": "The case links an operational problem to requirements, process, technical boundaries and controlled delivery. Evidence shows analysis and design reasoning, plus tested prototype rules. It does not claim real stakeholder facilitation or client production results.\n\nIllustrative targets: inventory accuracy 92% to at least 98%; claim resolution 18 to at most 10 business days; same-shift capture 55% to at least 95%. Establish the real baseline before judging value. Cash avoidance and released capacity remain separate.",
+      "source": "13-kpis/target-kpis.md"
+    }
+  ]
+}

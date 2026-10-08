@@ -6,3 +6,9 @@ playwright-report/
 test-results/
 .DS_Store
 dist/
+
+.scratch/
+.codex-finalizer/
+
+# Private generated design studies; implemented UI and design specification are versioned.
+application-kit/portfolio/assets/design/

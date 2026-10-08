@@ -1,0 +1,1354 @@
+{
+  "basisCommit": "a9a8a1bbded06c397be664e8e8c184ec93e44d86",
+  "scope": "Entire tracked source and evidence, excluding generated build output, local visitor databases and dependency trees",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "8e0137d363f4226d1a49ccca5d92c1d830e50121f59db4726c4f9a1c750365b6",
+      "bytes": 202,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "da4c384ecf69514bc8ebaa516d50ab6a0ede9714df4e69b057fd90b0245f0f6b",
+      "bytes": 1012,
+      "words": 101,
+      "kind": "evidence"
+    },
+    {
+      "path": ".github/workflows/quality.yml",
+      "sha256": "ed25a73c90f8951a9e4c18fc093bedc7c8ad8958bd88651b850b5243df7769e6",
+      "bytes": 752,
+      "words": 79,
+      "kind": "evidence"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "92781c75d1d7ffa80cdaf7f3d62e946ed53cd1f910edaabc0c2a93e044e69227",
+      "bytes": 93,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "01-discovery/business-context.md",
+      "sha256": "7c1dde890657904fb60eeafd0834ea147f9342d536df756bde89c31281785b54",
+      "bytes": 1272,
+      "words": 168,
+      "kind": "evidence",
+      "heading": "# Business context",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "01-discovery/interview-questions.md",
+      "sha256": "8bd694eba4ffe035fd99cc7b1857eee4f1fcbd26e283255f4e1706c35ca667b3",
+      "bytes": 1373,
+      "words": 224,
+      "kind": "evidence",
+      "heading": "# Interview questions",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "01-discovery/problem-statements.md",
+      "sha256": "2e4b67910f6693ffb2a924c0ff861c334040f421528d9140a8190e390c902166",
+      "bytes": 1160,
+      "words": 172,
+      "kind": "evidence",
+      "heading": "# Problem statements and boundaries",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "01-discovery/stakeholder-map.md",
+      "sha256": "e77176323c465128ddaa3858383b45fdcfe58433ca1b00602102c534ce81f74b",
+      "bytes": 913,
+      "words": 119,
+      "kind": "evidence",
+      "heading": "# Stakeholder map",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "01-discovery/stakeholder-matrix.md",
+      "sha256": "449bcc012240a094aaa4894d73bea47ea99708854f051cdf2e2d265927e8c4e0",
+      "bytes": 1569,
+      "words": 264,
+      "kind": "evidence",
+      "heading": "# Influence, impact and engagement",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "01-discovery/workshop-agenda.md",
+      "sha256": "284da1043329fd388d791ff084f39e6e6d6172138016df369ecfe3b92841cf20",
+      "bytes": 1122,
+      "words": 178,
+      "kind": "evidence",
+      "heading": "# Workshop agenda \u2014 150 minutes",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "01-discovery/workshop-notes-example.md",
+      "sha256": "9f5641402cc07ecd7f7cd4a7a79adadcf20ae0b5c6126ceeca58cfaf77213eca",
+      "bytes": 3010,
+      "words": 438,
+      "kind": "evidence",
+      "heading": "# Worked fictional workshop record",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "01-discovery/workshop-plan.md",
+      "sha256": "1473f7a41e74ba394fc87102739686b8e345cc099dff2d42f97b23aa7080f22d",
+      "bytes": 1349,
+      "words": 163,
+      "kind": "evidence",
+      "heading": "# Workshop preparation",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "02-requirements/acceptance-criteria.md",
+      "sha256": "ed2a68adc813584bd3b2d3c69b70ff85a2e8393387611a3b10a632199d399304",
+      "bytes": 2658,
+      "words": 358,
+      "kind": "evidence",
+      "heading": "# Acceptance criteria",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "02-requirements/assumptions-constraints.md",
+      "sha256": "4af02e139a93ad62308a6f94d2c5b4c3a6a75a901669e3bb407ef3e1a4c10d4b",
+      "bytes": 1289,
+      "words": 200,
+      "kind": "evidence",
+      "heading": "# Assumptions and constraints",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "02-requirements/business-requirements.md",
+      "sha256": "77967852d1dff1a374fb7ba0d8039ff83f81435ad8960c56495599b86c555315",
+      "bytes": 997,
+      "words": 154,
+      "kind": "evidence",
+      "heading": "# Business requirements",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "02-requirements/functional-requirements.md",
+      "sha256": "c51b0c0c000419f8f738e7f6f305d333545f4c58896c040cb55005db505b07c0",
+      "bytes": 1697,
+      "words": 267,
+      "kind": "evidence",
+      "heading": "# Functional requirements",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "02-requirements/non-functional-requirements.md",
+      "sha256": "e298d7ffd39333ece7e1e3adb52c015bf6f605f9820dba0c23eddabc3a903055",
+      "bytes": 1501,
+      "words": 229,
+      "kind": "evidence",
+      "heading": "# Non-functional requirements",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "02-requirements/requirements-traceability-matrix.md",
+      "sha256": "b87bbc6eaa2770d9f99bfdf58fd09b9288d7d5e311ed99e79938f1de54094390",
+      "bytes": 3990,
+      "words": 395,
+      "kind": "evidence",
+      "heading": "# Requirements traceability matrix",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "02-requirements/traceability.json",
+      "sha256": "d1fcbe4c8330a10c3082b651795addcf0a12bf34625abbe91e881bfa7514462f",
+      "bytes": 3218,
+      "words": 288,
+      "kind": "evidence"
+    },
+    {
+      "path": "02-requirements/user-stories.md",
+      "sha256": "5cb612b2da70073b70fbc7be46624fdcb4dc3e13a56aa386740df9319397854d",
+      "bytes": 3269,
+      "words": 412,
+      "kind": "evidence",
+      "heading": "# User stories",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "03-processes/bpmn/README.md",
+      "sha256": "62d8ccdc9727ae333fdd0c0f5d8355ffef05dacbbd477b4ae66821458ec87fe6",
+      "bytes": 5146,
+      "words": 571,
+      "kind": "evidence",
+      "heading": "# BPMN model catalogue",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "03-processes/bpmn/damage-claim-full.bpmn",
+      "sha256": "c028509d6a5e4c58289e793c779be9061c1e0f64ea8111c2430131642e9a8a5e",
+      "bytes": 28991,
+      "words": 1689,
+      "kind": "evidence",
+      "processes": [
+        {
+          "name": "Digital damage claim lifecycle",
+          "executable": "false",
+          "nodes": 14
+        },
+        {
+          "name": "Hourly persistent business deadline monitoring",
+          "executable": "false",
+          "nodes": 1
+        }
+      ]
+    },
+    {
+      "path": "03-processes/bpmn/inventory-checkout.bpmn",
+      "sha256": "8e0481863d973fb268b256e9b256eceff6fb136c2e522f980769282feb99cea9",
+      "bytes": 7251,
+      "words": 415,
+      "kind": "evidence",
+      "processes": [
+        {
+          "name": "Material checkout",
+          "executable": "false",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "path": "03-processes/bpmn/inventory-damage.bpmn",
+      "sha256": "4b39a8894a973762585ef86fa26f227e04b8df3729d7a51364bff4fa990fe311",
+      "bytes": 10021,
+      "words": 573,
+      "kind": "evidence",
+      "processes": [
+        {
+          "name": "Damaged material handling",
+          "executable": "false",
+          "nodes": 7
+        }
+      ]
+    },
+    {
+      "path": "03-processes/bpmn/inventory-return.bpmn",
+      "sha256": "5473dbb8030029cfbd4ce14c58b68ddd2230633a00548ea2112d38339fc2b96b",
+      "bytes": 7789,
+      "words": 449,
+      "kind": "evidence",
+      "processes": [
+        {
+          "name": "Material return",
+          "executable": "false",
+          "nodes": 4
+        }
+      ]
+    },
+    {
+      "path": "03-processes/bpmn/inventory-transfer.bpmn",
+      "sha256": "0c8e8f17643f6e06c905610bbc763bb9bbf67d602263b1c4641a30b12da1478c",
+      "bytes": 9327,
+      "words": 534,
+      "kind": "evidence",
+      "processes": [
+        {
+          "name": "Material transfer",
+          "executable": "false",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "path": "03-processes/damage-claims/as-is.md",
+      "sha256": "bfbd44505a51dea4a8aaba44ad7760b9502e6f04cbef73cdb0893f9cd3f04e8c",
+      "bytes": 680,
+      "words": 94,
+      "kind": "evidence",
+      "heading": "# Damage claims AS-IS",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "03-processes/damage-claims/exceptions.md",
+      "sha256": "35485d4caa25f5288fff3ab39077eec228ede6727593ce3caba925c2cc6c5dc1",
+      "bytes": 1398,
+      "words": 206,
+      "kind": "evidence",
+      "heading": "# Damage claims exceptions",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "03-processes/damage-claims/to-be.md",
+      "sha256": "bfe314f08bd926ddc731cf6c76b3d7e4d6b87d4d072cafe54d7228d6aadbdfeb",
+      "bytes": 2018,
+      "words": 253,
+      "kind": "evidence",
+      "heading": "# Damage claims TO-BE",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "03-processes/inventory/as-is.md",
+      "sha256": "5b89e05d6cc6b5885a6cfdcc0428a0fa8cce50fb1cc8acbc4026a617c38f3c74",
+      "bytes": 769,
+      "words": 107,
+      "kind": "evidence",
+      "heading": "# Inventory AS-IS",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "03-processes/inventory/exceptions.md",
+      "sha256": "c857dcbff54d51831ed39b93f488e018545dfd14dad3a7a6d4c8f48e076350d1",
+      "bytes": 1219,
+      "words": 180,
+      "kind": "evidence",
+      "heading": "# Inventory exceptions",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "03-processes/inventory/to-be.md",
+      "sha256": "3d90933d37ca64cb37fee779ba51d09d44360e446a04aa89c7a1a6423eef0d92",
+      "bytes": 1976,
+      "words": 239,
+      "kind": "evidence",
+      "heading": "# Inventory TO-BE",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/architecture.md",
+      "sha256": "5f579fe9c27aea3f11bc86fb891d58ad730eeb0ba88703f16d18408001a0f218",
+      "bytes": 1986,
+      "words": 268,
+      "kind": "evidence",
+      "heading": "# Architecture \u2014 business, application, data and integration",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/data-flow.md",
+      "sha256": "27c81d90686ea054beac0084890693ae8e87860b97621f6666d5320f59101f32",
+      "bytes": 1253,
+      "words": 175,
+      "kind": "evidence",
+      "heading": "# Data flow and failure boundaries",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/data-model.md",
+      "sha256": "c898efd562dace092a0d24043cfe09281f9031f0f184083250bdd8fe1006b3ef",
+      "bytes": 2810,
+      "words": 400,
+      "kind": "evidence",
+      "heading": "# Data model and system of record",
+      "audience": "technical",
+      "longForRecruiter": true
+    },
+    {
+      "path": "04-solution-design/decision-log.md",
+      "sha256": "cccdc9350134bc92e516da29c86c22d9426fcec109d025c15270f8f169ffb98c",
+      "bytes": 2826,
+      "words": 339,
+      "kind": "evidence",
+      "heading": "# Architecture decisions",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/integration-map.md",
+      "sha256": "1995e90117062cf9b19b549c29c581ebd524a74ebfd46a2f5da830cb58f7455a",
+      "bytes": 1293,
+      "words": 196,
+      "kind": "evidence",
+      "heading": "# Integration map",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/security.md",
+      "sha256": "7f9b4255f84c08ac6616759db9c95078a0fff283436650c76fa41dfde6bcd420",
+      "bytes": 2127,
+      "words": 279,
+      "kind": "evidence",
+      "heading": "# Security and privacy control design",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/solution-overview.md",
+      "sha256": "bc62cab3f29bf6b9536c1d95608140a0121072b5969b9e1ef0fba84baa6694a1",
+      "bytes": 1021,
+      "words": 136,
+      "kind": "evidence",
+      "heading": "# Solution overview",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "04-solution-design/system-context.md",
+      "sha256": "1ba02ec44b1f5b3d795804e90f67b360a6a687cf391b1c52df9e7cb88c465c16",
+      "bytes": 1190,
+      "words": 174,
+      "kind": "evidence",
+      "heading": "# System context and boundaries",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "05-integrations/api-contracts/examples.md",
+      "sha256": "5252c70aa1fb2c7b227764e62e9f990cbac7a9205141ef4c23de71e08e08fd05",
+      "bytes": 1324,
+      "words": 124,
+      "kind": "evidence",
+      "heading": "# API examples",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "05-integrations/api-contracts/openapi.json",
+      "sha256": "f53f0a948887893b025af30feffdd90b62987fee5dfb158311c3a4789413324a",
+      "bytes": 75701,
+      "words": 5134,
+      "kind": "evidence"
+    },
+    {
+      "path": "05-integrations/authentication.md",
+      "sha256": "3bfdd0beb9670bac9fc2e17e563b559908c6a9cfc7c6390b4ea8a5106c99c50c",
+      "bytes": 1002,
+      "words": 125,
+      "kind": "evidence",
+      "heading": "# API authentication",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "05-integrations/erp-integration.md",
+      "sha256": "5117b99848035d76e9e20fa7b52e1a5d0e0c804059d46017418739eb48efb4e1",
+      "bytes": 3089,
+      "words": 454,
+      "kind": "evidence",
+      "heading": "# ERP integration and ownership",
+      "audience": "technical",
+      "longForRecruiter": true
+    },
+    {
+      "path": "05-integrations/error-handling.md",
+      "sha256": "5752afd7fee640725db4538a2b08efb241b4b563dc9c023add7c73169a234faf",
+      "bytes": 1739,
+      "words": 264,
+      "kind": "evidence",
+      "heading": "# Error handling and resilience",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "05-integrations/integration-monitoring.md",
+      "sha256": "d32b6630b1ff5a477d245fd49b649b31d195fdfc22ad0008f4476467f672674a",
+      "bytes": 1264,
+      "words": 186,
+      "kind": "evidence",
+      "heading": "# Integration monitoring",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "05-integrations/operations-runbook.md",
+      "sha256": "52adfbd42554f80c69b866b8df956fbff92f30ce3e3de258ef8bcec76310b3d7",
+      "bytes": 2149,
+      "words": 277,
+      "kind": "evidence",
+      "heading": "# Runbook \u2014 damage claims stopped syncing with ERP",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "05-integrations/webhooks.md",
+      "sha256": "6e718fa95c7dfb1b22f2a5eb0909559c03afdefd72c5f7f1c8e64685d2463e7e",
+      "bytes": 1086,
+      "words": 118,
+      "kind": "evidence",
+      "heading": "# Webhook contract",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/approval-flows.md",
+      "sha256": "f2b1552fecf26cf9f4a0b23a6c5e837cae48a32ccbb1edbe2135523a0c82815e",
+      "bytes": 686,
+      "words": 86,
+      "kind": "evidence",
+      "heading": "# Approval rules",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/automation-catalog.md",
+      "sha256": "2cfc7e8859bff1acf5743abd62306d640604a7ca73cd5b38ac03cd1d8163d266",
+      "bytes": 970,
+      "words": 143,
+      "kind": "evidence",
+      "heading": "# Automation catalogue",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/escalation-flow.md",
+      "sha256": "082193dcbc1275d04f1958f51de011b1a291bcabf76f336d6a38b73173a8ef48",
+      "bytes": 715,
+      "words": 89,
+      "kind": "evidence",
+      "heading": "# Escalation ownership",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/notifications.md",
+      "sha256": "c630892719dc1c4ad2554a520ab15418e656ac5a43bd3a56b21ebf4c2e3cc2fb",
+      "bytes": 619,
+      "words": 77,
+      "kind": "evidence",
+      "heading": "# Notification design",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/power-automate/01-damage-submitted.md",
+      "sha256": "62fb3b2d6c89c3ff536755cb05e24a650e9dae052dd89d7043ca9ae1bf14ee02",
+      "bytes": 1201,
+      "words": 158,
+      "kind": "evidence",
+      "heading": "# AUT-01 \u2014 Damage claim submitted",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/power-automate/02-high-value.md",
+      "sha256": "f776408213904d757e66c620c857edca6f3ad966257dbf26007c90cd80c4dd73",
+      "bytes": 1210,
+      "words": 166,
+      "kind": "evidence",
+      "heading": "# AUT-02 \u2014 High-value damage approval",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/power-automate/03-overdue.md",
+      "sha256": "b2f0e7413358f8962a41ea6eae67e13d7d6d98211b9ba5ed7080b7ea5262c59d",
+      "bytes": 1155,
+      "words": 160,
+      "kind": "evidence",
+      "heading": "# AUT-03 \u2014 Overdue claim",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/power-automate/04-asset-return.md",
+      "sha256": "c06faa515fdbbdf46e7b4266af580512e8b391546a8cc456a2c5ef85b0ca01fa",
+      "bytes": 1235,
+      "words": 169,
+      "kind": "evidence",
+      "heading": "# AUT-04 \u2014 Asset return notification",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "06-automation/power-automate/README.md",
+      "sha256": "991d9052d40ae8d8b57bb395786dde2bd97e84c0995e63bd9d4ffadbd5904e41",
+      "bytes": 1320,
+      "words": 159,
+      "kind": "evidence",
+      "heading": "# Power Automate flow blueprints",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/ai-opportunity-assessment.md",
+      "sha256": "26ce7dd9c5af9d2278846955dfd4f57e697d026a2a137596336f405208ae4d73",
+      "bytes": 1872,
+      "words": 396,
+      "kind": "evidence",
+      "heading": "# AI opportunity assessment",
+      "audience": "technical",
+      "longForRecruiter": true
+    },
+    {
+      "path": "07-ai/ai-risk-register.md",
+      "sha256": "13818174050cf8e1e04cb37793b7a047daa1de7efe4fc62de5b006c4d6e6a4bf",
+      "bytes": 1397,
+      "words": 223,
+      "kind": "evidence",
+      "heading": "# AI risk register",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/architecture.md",
+      "sha256": "d31808b92fb7dfff8bf1a94bf4261070ab06c2e8901cc939bac2336d667e2659",
+      "bytes": 1194,
+      "words": 167,
+      "kind": "evidence",
+      "heading": "# AI architecture and trust boundary",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/damage-claim-assistant.md",
+      "sha256": "8be5dba596b797572de74fa889d0fe865954eb30189c995f093859172b661857",
+      "bytes": 1504,
+      "words": 199,
+      "kind": "evidence",
+      "heading": "# AI Damage Claim Assistant",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/evaluation/dataset.json",
+      "sha256": "b05d12e63eed72602209a556ab15eeb6a7ee422e35432c388d12fc57d358811d",
+      "bytes": 3231,
+      "words": 271,
+      "kind": "evidence"
+    },
+    {
+      "path": "07-ai/evaluation.md",
+      "sha256": "c909ae30d9e66d208cd707c7305d4aae0bf3f4926bd10ef6afcf234ecb3526e2",
+      "bytes": 1603,
+      "words": 199,
+      "kind": "evidence",
+      "heading": "# AI evaluation plan and dataset",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/guardrails.md",
+      "sha256": "e7d87b6acdfb0fa7ec9f12c0da5a55e23f5c107abb750cc95efa3050d028d3f3",
+      "bytes": 1246,
+      "words": 190,
+      "kind": "evidence",
+      "heading": "# AI guardrails",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/human-in-the-loop.md",
+      "sha256": "2f51dab0ebe344e6485306997ef6460d2f73147e88c5659168e54798807453f7",
+      "bytes": 886,
+      "words": 121,
+      "kind": "evidence",
+      "heading": "# Human review workflow",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/prompts/damage-assistant-v1.md",
+      "sha256": "aef4affb6dda75c16feebd64b0f9e8c182e82030eb7a0a55048e8ecc0dbb9faf",
+      "bytes": 1071,
+      "words": 140,
+      "kind": "evidence",
+      "heading": "# Prompt BF-DAMAGE-1.0",
+      "audience": "technical",
+      "longForRecruiter": false
+    },
+    {
+      "path": "07-ai/prompts/output-schema.json",
+      "sha256": "2d2b46bfb0b4e97992cb33599b1530f7e379c4c3cc54d4691bc4120fe8e2b5a4",
+      "bytes": 1029,
+      "words": 84,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/README.md",
+      "sha256": "5d2ffa2f724ea8f88a28d134adec24063847b711799f55ab1c307f3e40c8f91a",
+      "bytes": 5219,
+      "words": 669,
+      "kind": "evidence",
+      "heading": "# Executable local prototype",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "08-prototype/api/domain.mjs",
+      "sha256": "cc597c393527749a8459ebb6744a04b81c1f772bbffe5791a556e30ae77b8767",
+      "bytes": 15086,
+      "words": 685,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/api/server.mjs",
+      "sha256": "1d9d09ab747c12b056014c5bb4c831ea8fa44334d7a44926e019c7c7c2ceb807",
+      "bytes": 5660,
+      "words": 295,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/frontend/app.js",
+      "sha256": "b6f0e1cb81d8c6aa9111295b965640cda969005de656971ea78ea423eff1d9bd",
+      "bytes": 22244,
+      "words": 939,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/frontend/client.js",
+      "sha256": "bc708be54349db50b520642d60f2e934be628454a84efefdd7c5af7d1ddc0b63",
+      "bytes": 3263,
+      "words": 220,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/frontend/evidence-hose.svg",
+      "sha256": "8877d26f13ac9054e814c8f76f4e2e6314db9643eb2598c2ebdac778654e79a1",
+      "bytes": 447,
+      "words": 47,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/frontend/evidence-housing.svg",
+      "sha256": "1ee27b75fac6ce4a3d89ec0d655ba06124e44758f3e92e68ec989d71167c8b74",
+      "bytes": 391,
+      "words": 33,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/frontend/index.html",
+      "sha256": "ab4c8ae540d976e0e8bd646be56b9ca35f77b070abe5484b22484f346d374631",
+      "bytes": 1334,
+      "words": 59,
+      "kind": "evidence"
+    },
+    {
+      "path": "08-prototype/frontend/style.css",
+      "sha256": "fec44dcbcd410888b06488bb25e066c8f44b60d28a84f691569856b8cf71f080",
+      "bytes": 6231,
+      "words": 108,
+      "kind": "evidence"
+    },
+    {
+      "path": "09-testing/defect-log-example.md",
+      "sha256": "b49269c0fd538895db1bc327a5c29e1e46a737453b5f7a777b88b5673f75fb00",
+      "bytes": 961,
+      "words": 148,
+      "kind": "evidence",
+      "heading": "# Illustrative defect log",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "09-testing/sign-off-template.md",
+      "sha256": "d569e9d95332c7f41af3d87441bbf20378194f483e98a29d86a67835c88f07f1",
+      "bytes": 855,
+      "words": 108,
+      "kind": "evidence",
+      "heading": "# Business acceptance template",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "09-testing/test-strategy.md",
+      "sha256": "ac7c144def7f024bd758c6650f0b4dc55792ae5ae8a3d794a580966d958c464f",
+      "bytes": 1350,
+      "words": 189,
+      "kind": "evidence",
+      "heading": "# Test strategy",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "09-testing/uat-plan.md",
+      "sha256": "1a8f6c36679bc15e048c4ad30ee9fbd75e5464e9eded2e7742a246052123719b",
+      "bytes": 1009,
+      "words": 128,
+      "kind": "evidence",
+      "heading": "# UAT plan",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "09-testing/uat-scenarios.md",
+      "sha256": "fee14f014ef133255e1d126904c234d6f465c29b8d1cc665bc8bd7e89b4c556f",
+      "bytes": 10229,
+      "words": 1247,
+      "kind": "evidence",
+      "heading": "# User acceptance scenarios",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "10-implementation/hypercare-plan.md",
+      "sha256": "6b99b005bbe5cb0f80762b70832bcbd30573cd0463c764adde9abc84df7bd906",
+      "bytes": 995,
+      "words": 126,
+      "kind": "evidence",
+      "heading": "# Hypercare \u2014 first ten working days",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "10-implementation/implementation-plan.md",
+      "sha256": "f251299ea3eb9c01b1a7ea98c4fe07de0fb7d4ac40b03225eaa6f5cbe133ed20",
+      "bytes": 1606,
+      "words": 239,
+      "kind": "evidence",
+      "heading": "# Implementation plan",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "10-implementation/migration-plan.md",
+      "sha256": "14825c5c316a139e3760f07b79056dfea8dd5e59aab5ed91605508d35b015917",
+      "bytes": 1338,
+      "words": 176,
+      "kind": "evidence",
+      "heading": "# Migration and cutover data",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "10-implementation/release-checklist.md",
+      "sha256": "c2f22d8e866f0c300f146e49da32da22b7907783feebb00ac1ecca319dcc2e85",
+      "bytes": 1340,
+      "words": 189,
+      "kind": "evidence",
+      "heading": "# Release readiness checklist",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "10-implementation/rollback-plan.md",
+      "sha256": "fc6653c0036226d73a65540390bd33334a666e3113e5b3c4f8e8cf967780f741",
+      "bytes": 1351,
+      "words": 172,
+      "kind": "evidence",
+      "heading": "# Rollback and continuity",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "10-implementation/rollout-plan.md",
+      "sha256": "3401039521c0996213812357f84cfa3ab221759619fac36ee4c180de6535a538",
+      "bytes": 1075,
+      "words": 147,
+      "kind": "evidence",
+      "heading": "# Pilot and phased rollout",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "11-change-management/adoption-plan.md",
+      "sha256": "fa6f30f39b80e856307a6e9091e607e06f30ea32282622a440e2601c9794a204",
+      "bytes": 1505,
+      "words": 211,
+      "kind": "evidence",
+      "heading": "# Adoption and respectful resistance response",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "11-change-management/communication-plan.md",
+      "sha256": "922777dd66b9fc7eb3e07dc16a81dbe597ae677f1c0cee055b1de6d12e4add5e",
+      "bytes": 1199,
+      "words": 192,
+      "kind": "evidence",
+      "heading": "# Communication plan",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "11-change-management/stakeholder-impact.md",
+      "sha256": "1cb713cddd8158a616d39c9558f02e6e1768223552a289b99cc626c09b9e73d0",
+      "bytes": 1153,
+      "words": 166,
+      "kind": "evidence",
+      "heading": "# Stakeholder impact",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "11-change-management/training-plan.md",
+      "sha256": "863c8ecd72b57ad48475142ba8db0b9a794c2b6c4e669fe92c9bb7ceb7bf07e0",
+      "bytes": 1006,
+      "words": 149,
+      "kind": "evidence",
+      "heading": "# Training plan",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "11-change-management/user-guide.md",
+      "sha256": "3ea4fdb7b1776f8bd20bd03355cba16c1f61988434efbdcbba5f52036ea4ccd0",
+      "bytes": 1482,
+      "words": 213,
+      "kind": "evidence",
+      "heading": "# Quick user guide",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "12-governance/decision-log.md",
+      "sha256": "97a99ad66855f757015f1eacf549776aa0d8c366e0f38e57d45f5c5d7f639de1",
+      "bytes": 1134,
+      "words": 165,
+      "kind": "evidence",
+      "heading": "# Business decision log",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "12-governance/project-status-example.md",
+      "sha256": "9bd34095270d2e3e35fefe6fc7f55e96a9c4a07e2e0582cd50c5ad7721458ccd",
+      "bytes": 1100,
+      "words": 159,
+      "kind": "evidence",
+      "heading": "# Illustrative steering status",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "12-governance/raci.md",
+      "sha256": "faf250668f39b9cbad2f150a36aafe5d9ef7d634bef5eeaba0b39a10d15e64c3",
+      "bytes": 1395,
+      "words": 338,
+      "kind": "evidence",
+      "heading": "# RACI",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "12-governance/raid-log.md",
+      "sha256": "c6c45a3552de6ec27b1c4883b3646d2e39dabe3643345586efbfc1ee01ed448a",
+      "bytes": 1688,
+      "words": 263,
+      "kind": "evidence",
+      "heading": "# RAID example",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "12-governance/risk-register.md",
+      "sha256": "e23c886bf28c3fe35a1b1a75801d2596656415c914fb85e2b27b68ce7a06991e",
+      "bytes": 1329,
+      "words": 205,
+      "kind": "evidence",
+      "heading": "# Project risk register",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "13-kpis/baseline.md",
+      "sha256": "2c17a7a83e7a3ac355a62a78fc4ccc3948c6b26c2f09c37eff436b2ded36e4e6",
+      "bytes": 1069,
+      "words": 131,
+      "kind": "evidence",
+      "heading": "# Illustrative baseline",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "13-kpis/benefits-realisation.md",
+      "sha256": "73ebce4fc598c19ea7e1e597f0f34581787f61180fe1a6c82825e7229ec2a346",
+      "bytes": 978,
+      "words": 130,
+      "kind": "evidence",
+      "heading": "# Benefits realisation plan",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "13-kpis/business-case.json",
+      "sha256": "f777e01e8963436ce89ea4bbc06b0a7880878dbe6f6ddf99005f087b896860ec",
+      "bytes": 302,
+      "words": 26,
+      "kind": "evidence"
+    },
+    {
+      "path": "13-kpis/business-case.md",
+      "sha256": "0dc715df85c6f52b03735ecd338e682a481deb0c9dbef600d07cb9c68a109432",
+      "bytes": 2150,
+      "words": 283,
+      "kind": "evidence",
+      "heading": "# Conservative business case",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "13-kpis/dashboard-specification.md",
+      "sha256": "5076a38c34dcc4f83092808b0d9ddbecab8cfe0d93908f5e6089143f25b1af01",
+      "bytes": 1199,
+      "words": 165,
+      "kind": "evidence",
+      "heading": "# Operational and management dashboards",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "13-kpis/target-kpis.md",
+      "sha256": "542259701dbce9a36f8b0a6d6546f4e75191344ba6046b4595ffd24920d46db6",
+      "bytes": 3060,
+      "words": 484,
+      "kind": "evidence",
+      "heading": "# KPI definitions and targets",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "14-demo/demo-script-15-minutes.md",
+      "sha256": "eb833d02a8311a85542fc38a057c7bd00392a15531dfc1477897a87a8e9b0e67",
+      "bytes": 1085,
+      "words": 133,
+      "kind": "evidence",
+      "heading": "# Fifteen-minute deep dive",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "14-demo/demo-script-5-minutes.md",
+      "sha256": "fd6a109d7822fdc468d34a600f57ebf88101758594e920fb00743324f9758ffb",
+      "bytes": 1961,
+      "words": 276,
+      "kind": "evidence",
+      "heading": "# Five-minute interview story",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "14-demo/interview-talking-points.md",
+      "sha256": "f49a4d8648920be2679a9c63fce4ef187d5d431cd96389463071676b68da0e68",
+      "bytes": 1490,
+      "words": 225,
+      "kind": "evidence",
+      "heading": "# Interview questions and credible answers",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "14-demo/screenshots/README.md",
+      "sha256": "d474bb580036a736dde6dcc88183930ccbcf45f683cc4b5deba3f23123b69beb",
+      "bytes": 1112,
+      "words": 129,
+      "kind": "evidence",
+      "heading": "# Prototype evidence",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "14-demo/screenshots/claim-ai-review.png",
+      "sha256": "189aec2cc0215fb5a32aa729f02643fc94d649a162321b2eedc13d719cf9d7b2",
+      "bytes": 210548,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "14-demo/screenshots/dashboard-desktop.png",
+      "sha256": "9e10cd0389a325b530603fa4fe29565b4bd69156cd98635e2cddc475f0a713af",
+      "bytes": 132119,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "14-demo/screenshots/dashboard-mobile.png",
+      "sha256": "8801b12605a74577e7808ab3edd57bf1168e2e3927258a2bba4e276c040f6b2c",
+      "bytes": 219080,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "14-demo/screenshots/integration-ledger.png",
+      "sha256": "0512a3637589fa4858d86fee9dcac04687bfd2114e18c109696b332129962c78",
+      "bytes": 91783,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "14-demo/screenshots/inventory-detail.png",
+      "sha256": "0a9dce5bc41644628ed46ad4e7d93a14c412c668502cdd1c42234487fcea0b90",
+      "bytes": 115467,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "14-demo/screenshots/public-demo-desktop.png",
+      "sha256": "5731287f20f939dd377557e0b84de6ead64f5c33612f933f73bf2f2c38d12fa1",
+      "bytes": 145086,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "14-demo/screenshots/public-demo-mobile.png",
+      "sha256": "1677bf5edb4f5f7a0d994c427752a86c6eea68ad23b6879e443aa42dba5415df",
+      "bytes": 115486,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "sha256": "dddfd93bf5a01ade0aa02bc6c53bc1c8f0ad09d460cbdc507cd2abd37fca2731",
+      "bytes": 1730,
+      "words": 206,
+      "kind": "evidence",
+      "heading": "# Architecture at a glance",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "CASE_STUDY.md",
+      "sha256": "4a7634ec6636f4f513493c234c20f8f9bcdede0b05205eec14bb768e470854bc",
+      "bytes": 2467,
+      "words": 333,
+      "kind": "evidence",
+      "heading": "# From missing equipment to controlled operations",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "f8d2952dff8f001288600e77606b81674569e30a091253b8f175139d716531e0",
+      "bytes": 409,
+      "words": 59,
+      "kind": "evidence",
+      "heading": "# Contributing",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "EXECUTIVE_DEMO.md",
+      "sha256": "0adb22311a7287ad253256186086cf93db9c9130eee3e973863d54b9304ada2a",
+      "bytes": 1733,
+      "words": 206,
+      "kind": "evidence",
+      "heading": "# Executive demonstration",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a79062fe88bbae2d91b507eafdb96cfb6a83b2558ae855fb71a0e51e08ee2886",
+      "bytes": 1073,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "README.md",
+      "sha256": "60c236ce1577c828f2e1d7b350e12bafafea2cc14f87dc0aa55ae39c563abcc2",
+      "bytes": 7500,
+      "words": 828,
+      "kind": "evidence",
+      "heading": "# BuildFlow Digital Transformation Case Study",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "docs/design/concept-brief.md",
+      "sha256": "a92a1181eb7aaf8baf21b015c7827467db09169046e6dc46090124428da532c0",
+      "bytes": 1276,
+      "words": 152,
+      "kind": "evidence",
+      "heading": "# Generated visual concept brief",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "docs/design/dashboard-concept.png",
+      "sha256": "1810175b35e3264a531ba5405adf8f626fa66c172007934f4f3f996bb66747f2",
+      "bytes": 1274176,
+      "kind": "visual evidence"
+    },
+    {
+      "path": "docs/design/design-system.md",
+      "sha256": "f22156fdee32d6b4a4471a5276de4690666090648d15e2fca2c4032826311fbc",
+      "bytes": 1440,
+      "words": 182,
+      "kind": "evidence",
+      "heading": "# Prototype design specification",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "docs/diagrams/damage-claim-full.svg",
+      "sha256": "18d2dc365ad9168fee23c5b24fa1ea84b386a07b6eb70f1609f48c92ebd09811",
+      "bytes": 10677,
+      "words": 880,
+      "kind": "evidence"
+    },
+    {
+      "path": "docs/diagrams/inventory-checkout.svg",
+      "sha256": "417b570d29d63c102bcb775198ff351a5dadfff7cfcd78aad5396ed403850918",
+      "bytes": 2883,
+      "words": 229,
+      "kind": "evidence"
+    },
+    {
+      "path": "docs/diagrams/inventory-damage.svg",
+      "sha256": "85b9a4a3b35dfe5465991c68a96991f9758d9880fc3c4fc1a0edfa4b0ec35b89",
+      "bytes": 4126,
+      "words": 322,
+      "kind": "evidence"
+    },
+    {
+      "path": "docs/diagrams/inventory-return.svg",
+      "sha256": "f858d1fd1b0d1375e36341af35107a2fb49b1cb977ba41909e173760ac429c49",
+      "bytes": 3121,
+      "words": 244,
+      "kind": "evidence"
+    },
+    {
+      "path": "docs/diagrams/inventory-transfer.svg",
+      "sha256": "66b2480fa3483587a5574c3bcf2b460ac8aa14e07fbd4b650a0f3621e5d4375b",
+      "bytes": 3797,
+      "words": 293,
+      "kind": "evidence"
+    },
+    {
+      "path": "docs/pages-demo.md",
+      "sha256": "85f0d8d1ad14a86a92772dd5e1303713357999dfa1f0d12f0f4dc804d99b52f2",
+      "bytes": 3661,
+      "words": 453,
+      "kind": "evidence",
+      "heading": "# Public GitHub Pages demo",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "docs/quality-audit.md",
+      "sha256": "ac33224e2833e58fc3f9e960a849fb8f80eebd95cd6c6e34c6642259d876dd00",
+      "bytes": 7933,
+      "words": 1102,
+      "kind": "evidence",
+      "heading": "# Final quality audit",
+      "audience": "business/interview",
+      "longForRecruiter": true
+    },
+    {
+      "path": "docs/schemas/bpmn/BPMN20.xsd",
+      "sha256": "a07c159cb0594573dd7c97b1370dd116112378f377e43c89a8bf512ac5030705",
+      "bytes": 1941,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "docs/schemas/bpmn/BPMNDI.xsd",
+      "sha256": "f0dff1cd559d1514d8ebfc8c646f58402bcaced27ec22e2aa6456c2dcc80b038",
+      "bytes": 4010,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "docs/schemas/bpmn/DC.xsd",
+      "sha256": "a2f90e5ad9bb48c6915e4e034b4e27ac838264a1d4f27bfc70dbdfc69351312d",
+      "bytes": 1324,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "docs/schemas/bpmn/DI.xsd",
+      "sha256": "8220b179c175572df74e08a51bffabe957867962035cee7b5fee0b6acb4c4498",
+      "bytes": 3470,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "docs/schemas/bpmn/README.md",
+      "sha256": "37ffcdd79e525ec514284724bc3b309b9713d4aa1036ebc901979606527867ad",
+      "bytes": 682,
+      "words": 83,
+      "kind": "evidence",
+      "heading": "# Official OMG BPMN schema snapshot",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "docs/schemas/bpmn/Semantic.xsd",
+      "sha256": "c4318842f7d2bbc262d7954c9452c501db16f0868eac0b8732ec5d7fb384d9a7",
+      "bytes": 62507,
+      "kind": "metadata/schema"
+    },
+    {
+      "path": "docs/sources.md",
+      "sha256": "da048828d432e8f46109930b6e41f953242a85bab3e0f6ca5c4aa85a78cf0401",
+      "bytes": 1887,
+      "words": 167,
+      "kind": "evidence",
+      "heading": "# Technical source and verification notes",
+      "audience": "business/interview",
+      "longForRecruiter": false
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "286e6d9c5c81c4c24c22bfa79ecbf344a9aa60da00698f7dc515ea033f29fed1",
+      "bytes": 11082,
+      "words": 575,
+      "kind": "evidence"
+    },
+    {
+      "path": "package.json",
+      "sha256": "cca81623be995c4722c9eb44e4034e13e17fbaadef49a0381574b2583d63ce50",
+      "bytes": 908,
+      "words": 75,
+      "kind": "evidence"
+    },
+    {
+      "path": "playwright.config.mjs",
+      "sha256": "8b48d2dfe66774d0775ac4d44a01ba640ebd88364e304dfedaa000c08d29b6f4",
+      "bytes": 455,
+      "words": 14,
+      "kind": "evidence"
+    },
+    {
+      "path": "playwright.pages.config.mjs",
+      "sha256": "a0ff3137be0b51dd2a251b367c488d08a020184060b482be4f89281c276ad793",
+      "bytes": 306,
+      "words": 11,
+      "kind": "evidence"
+    },
+    {
+      "path": "scripts/build-pages.mjs",
+      "sha256": "2563bede9bb4b8b30d7f2cec02090746ad7260b41d8b208b9c5f8d3d6a7568e4",
+      "bytes": 970,
+      "words": 56,
+      "kind": "verification"
+    },
+    {
+      "path": "scripts/check-bpmn-xsd.py",
+      "sha256": "1aaa70bb48903070921cd50052db3a7cdb3d74fbfe5da6505e3eff5427674508",
+      "bytes": 518,
+      "words": 50,
+      "kind": "verification"
+    },
+    {
+      "path": "scripts/check.mjs",
+      "sha256": "a8f0035c6cf361d3a91172a876cc260261cac47bc2e4f94eebdb17d1d4257dc3",
+      "bytes": 4034,
+      "words": 132,
+      "kind": "verification"
+    },
+    {
+      "path": "scripts/serve-pages.mjs",
+      "sha256": "22863a7c75b24af5020f22a54aeac4160a2afdc931db1b31d59a94c3b63d6f2c",
+      "bytes": 1239,
+      "words": 59,
+      "kind": "verification"
+    },
+    {
+      "path": "tests/api.test.mjs",
+      "sha256": "ff1f280c431b4d31ff47a26dfd056e697924e1825e57a9e2675d1ab94b4a3c34",
+      "bytes": 8048,
+      "words": 285,
+      "kind": "verification"
+    },
+    {
+      "path": "tests/browser/workflows.spec.mjs",
+      "sha256": "c3bf0f64ab40b003310a143b5a49d8e5f3acaeab3c14fd8ba2d09e00cb58b0de",
+      "bytes": 5110,
+      "words": 186,
+      "kind": "evidence"
+    },
+    {
+      "path": "tests/pages/demo.spec.mjs",
+      "sha256": "ebec3359860762e956fd6020b97026e7b5fb7b0b94a24bfbb81d878f7088a4c8",
+      "bytes": 6609,
+      "words": 244,
+      "kind": "evidence"
+    }
+  ]
+}
