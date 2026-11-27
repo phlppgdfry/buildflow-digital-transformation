@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: Playwright can't install browsers on ubuntu-26.04 yet
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,7 +31,7 @@ jobs:
           path: dist/pages
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # pinned: Playwright can't install browsers on ubuntu-26.04 yet
     permissions:
       contents: read
       pages: write
